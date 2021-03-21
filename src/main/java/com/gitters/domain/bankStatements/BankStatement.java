@@ -7,7 +7,7 @@ import com.gitters.domain.transactions.Transaction;
 public class BankStatement {
 
     private String statmentId;
-    private List<Transaction> transaction = new ArrayList<Transaction>();
+    private List<Transaction> transactions = new ArrayList<Transaction>();
 
     public BankStatement() {
     }
@@ -29,15 +29,15 @@ public class BankStatement {
     /**
      * @return List<Transaction> return the transaction
      */
-    public List<Transaction> getTransaction() {
-        return transaction;
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 
     /**
      * @param transaction the transaction to set
      */
-    public void setTransaction(List<Transaction> transaction) {
-        this.transaction = transaction;
+    public void setTransaction(List<Transaction> transactions) {
+        this.transactions = transactions;
     }
 
 }
