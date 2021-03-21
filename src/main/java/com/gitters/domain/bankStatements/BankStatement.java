@@ -11,4 +11,33 @@ public class BankStatement {
 
     public BankStatement() {
     }
+
+    /**
+     * @return String return the statmentId
+     */
+    public String getStatmentId() {
+        return statmentId;
+    }
+
+    /**
+     * @param statmentId the statmentId to set
+     */
+    public void setStatmentId(String statmentId) {
+        this.statmentId = statmentId;
+    }
+
+    /**
+     * @return List<Transaction> return the transaction
+     */
+    public List<Transaction> getTransaction() {
+        return transaction;
+    }
+
+    /**
+     * @param transaction the transaction to set
+     */
+    public void setTransaction(List<Transaction> transaction) {
+        this.transaction = transaction;
+    }
+
 }
