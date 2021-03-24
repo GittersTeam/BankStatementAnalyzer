@@ -1,11 +1,5 @@
 package com.gitters.domain.processors;
 
-import java.util.Collections;
-import java.util.List;
-
-import com.gitters.domain.bankStatements.BankStatement;
-import com.gitters.domain.transactions.Transaction;
-
 public class TopTransaction {
     private int request;
 
