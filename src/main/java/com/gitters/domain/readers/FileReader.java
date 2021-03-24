@@ -64,8 +64,10 @@ public class FileReader implements Reader {
 			}
 			String creditvalues = values[3];
 			if (!creditvalues.isEmpty()) {
-				InBoundTransaction credit = new InBoundTransaction(date, creditvalues, null, null);
-
+				InBoundTransaction credit = new InBoundTransaction(date, values[1],
+				(Credit) parser.parse(creditvalues, ParseType.Credit),
+				(AccountBalance) parser.parse(values[4], ParseType.AccountBalance));
+				transactions.add(credit);
 			}
 
 		}
