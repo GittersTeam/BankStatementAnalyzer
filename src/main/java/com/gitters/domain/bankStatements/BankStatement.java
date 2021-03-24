@@ -2,42 +2,39 @@ package com.gitters.domain.bankStatements;
 
 import java.util.*;
 
+import com.gitters.domain.readers.CSVReader;
+import com.gitters.domain.transactions.Charge;
+import com.gitters.domain.transactions.Credit;
 import com.gitters.domain.transactions.Transaction;
 
 public class BankStatement {
 
-    private String statmentId;
-    private List<Transaction> transactions = new ArrayList<Transaction>();
+	private String statmentId;
+	private List<Transaction> transactions = new ArrayList<Transaction>();
 
-    public BankStatement() {
-    }
+	public BankStatement() {
 
-    /**
-     * @return String return the statmentId
-     */
-    public String getStatmentId() {
-        return statmentId;
-    }
+	}
 
-    /**
-     * @param statmentId the statmentId to set
-     */
-    public void setStatmentId(String statmentId) {
-        this.statmentId = statmentId;
-    }
+	public BankStatement(String csv) {
+		this.statmentId = csv;
 
-    /**
-     * @return List<Transaction> return the transaction
-     */
-    public List<Transaction> getTransactions() {
-        return transactions;
-    }
+	}
 
-    /**
-     * @param transaction the transaction to set
-     */
-    public void setTransaction(List<Transaction> transactions) {
-        this.transactions = transactions;
-    }
+	public String getStatmentId() {
+		return statmentId;
+	}
+
+	public void setStatmentId(String statmentId) {
+		this.statmentId = statmentId;
+	}
+
+	public List<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<Transaction> transactions) {
+		this.transactions = transactions;
+	}
 
 }
