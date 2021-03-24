@@ -6,6 +6,7 @@ import com.gitters.domain.bankStatements.BankStatement;
 import com.gitters.domain.parsers.AmountParser;
 import com.gitters.domain.parsers.ParseType;
 import com.gitters.domain.transactions.Charge;
+import com.gitters.domain.transactions.Credit;
 import com.gitters.domain.transactions.InBoundTransaction;
 import com.gitters.domain.transactions.OutBoundTransaction;
 import com.gitters.domain.transactions.Transaction;
@@ -65,11 +66,10 @@ public class FileReader implements Reader {
 			String creditvalues = values[3];
 			if (!creditvalues.isEmpty()) {
 				InBoundTransaction credit = new InBoundTransaction(date, values[1],
-				(Credit) parser.parse(creditvalues, ParseType.Credit),
-				(AccountBalance) parser.parse(values[4], ParseType.AccountBalance));
+						(Credit) parser.parse(creditvalues, ParseType.CREDIT),
+						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
 				transactions.add(credit);
 			}
-
 		}
 		s.close();
 
