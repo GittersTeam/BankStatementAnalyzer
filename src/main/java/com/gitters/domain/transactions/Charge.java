@@ -1,30 +1,29 @@
 package com.gitters.domain.transactions;
 
 import com.gitters.domain.Currency;
-import com.gitters.domain.parsers.AmountParser;
 
 public class Charge {
-	private String amount;
+	private Double amount;
 	private Currency currency;
 
 	public Charge() {
 
 	}
 
-	public Charge(String amount, Currency currency) {
-		this.amount = amount;
-		this.currency = currency;
+	public Charge(Double amount, Currency currency) {
+		setAmount(amount);
+		setCurrency(currency);
 	}
 
-	public Charge(String amount) {
+	public Charge(Double amount) {
 		this.amount = amount;
 	}
 
-	public String getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(String amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 

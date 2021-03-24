@@ -6,8 +6,9 @@ public class Balance {
     double amount;
     Currency currency;
 
-    public Balance(double amount) {
-        this.amount = amount;
+    public Balance(double amount,Currency currency) {
+        setAmount(amount);
+        setCurrency(currency);
     }
 
     public double getAmount() {

@@ -1,10 +1,10 @@
 package com.gitters.domain.readers;
 
 import com.gitters.domain.balance.AccountBalance;
-import com.gitters.domain.balance.Balance;
 import com.gitters.domain.balance.InitialBalance;
 import com.gitters.domain.bankStatements.BankStatement;
 import com.gitters.domain.parsers.AmountParser;
+import com.gitters.domain.parsers.ParseType;
 import com.gitters.domain.transactions.Charge;
 import com.gitters.domain.transactions.Credit;
 import com.gitters.domain.transactions.InBoundTransaction;
@@ -13,6 +13,7 @@ import com.gitters.domain.transactions.Transaction;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,7 +36,7 @@ public class FileReader implements Reader {
 
 	}
 
-	public BankStatement read() throws FileNotFoundException {
+	public BankStatement read() throws FileNotFoundException, ParseException {
 		File file = new File(bank.getStatmentId());
 		Scanner s = new Scanner(file);
 		int i = 0;
@@ -49,7 +50,7 @@ public class FileReader implements Reader {
 			String data = s.nextLine();
 			String[] values = data.split(",");
 			if (i == 1) {
-				iniBalance = (InitialBalance) parser.parse(values[4], ParseType.InitialBalance);
+				iniBalance = (InitialBalance) parser.parse(values[4], ParseType.INITIAL_BALANCE);
 				continue;
 			}
 			String chargesvalues = values[2];
@@ -58,16 +59,17 @@ public class FileReader implements Reader {
 			if (!chargesvalues.isEmpty()) {
 				OutBoundTransaction charge = new OutBoundTransaction(date, values[1],
 						(Charge) parser.parse(chargesvalues, ParseType.CHARGE),
-						(AccountBalance) parser.parse(values[4], ParseType.AccountBalance));
+						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
 				transactions.add(charge);
 
 			}
 			String creditvalues = values[3];
 			if (!creditvalues.isEmpty()) {
-				InBoundTransaction credit = new InBoundTransaction(date, creditvalues, null, null);
-
+				InBoundTransaction credit = new InBoundTransaction(date, values[1],
+						(Credit) parser.parse(creditvalues, ParseType.CREDIT),
+						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
+				transactions.add(credit);
 			}
-
 		}
 		s.close();
 

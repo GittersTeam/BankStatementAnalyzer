@@ -2,9 +2,6 @@ package com.gitters.domain.bankStatements;
 
 import java.util.*;
 
-import com.gitters.domain.readers.CSVReader;
-import com.gitters.domain.transactions.Charge;
-import com.gitters.domain.transactions.Credit;
 import com.gitters.domain.transactions.Transaction;
 
 public class BankStatement {
