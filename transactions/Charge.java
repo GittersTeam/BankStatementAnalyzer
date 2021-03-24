@@ -1,5 +1,6 @@
-package com.gitters.domain;
+package com.gitters.domain.transactions;
 
+import com.gitters.domain.Currency;
 import com.gitters.domain.parsers.AmountParser;
 
 public class Charge {
