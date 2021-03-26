@@ -23,7 +23,6 @@ import java.util.Scanner;
 public class FileReader implements Reader {
 	private BankStatement bank;
 	private AmountParser parser;
-	private InitialBalance iniBalance;
 	private List<Transaction> transactions;
 
 	public FileReader() {
@@ -50,16 +49,14 @@ public class FileReader implements Reader {
 
 			String data = s.nextLine();
 			String[] values = data.split(",");
-			// System.out.println(values[4]);
 			if (i == 1) {
-				iniBalance = (InitialBalance) parser.parse(values[4], ParseType.INITIAL_BALANCE);
+				bank.setInitialBalance((InitialBalance) parser.parse(values[4], ParseType.INITIAL_BALANCE));
 				i++;
 				continue;
 			}
 			String chargesvalues = values[2];
 			SimpleDateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");
 			Date date = formatter1.parse(values[0]);
-			// System.out.println(date);
 			if (!chargesvalues.isEmpty()) {
 				OutBoundTransaction charge = new OutBoundTransaction(date, values[1],
 						(Charge) parser.parse(chargesvalues, ParseType.CHARGE),
@@ -76,7 +73,6 @@ public class FileReader implements Reader {
 			i++;
 		}
 		s.close();
-
 		bank.setTransactions(transactions);
 
 		return bank;

@@ -10,8 +10,8 @@ public class InBoundTransaction extends Transaction {
 
 	public InBoundTransaction(Date date, String desc, Credit credit, AccountBalance accBalance) {
 		super(date, accBalance);
-		this.credit = credit;
-		this.from = from;
+		setCredit(credit);
+		setFrom(desc);
 	}
 
 	public String getFrom() {
@@ -32,7 +32,7 @@ public class InBoundTransaction extends Transaction {
 
 	@Override
 	public String toString() {
-		return "InBoundTransaction [credit=" + credit.toString() + ", from=" + from + "]";
+		return "InBoundTransaction [credit=" + credit.toString() + ", from=" + from + "]\n";
 	}
 
 }

@@ -49,7 +49,7 @@ public class AmountParser {
 
     private Double convert(String value) {
         // Negative
-        if (value.contains("-")) {
+        if (value.contains("(") && value.contains(")")) {
             String temp = value.substring(2, value.length() - 1);
             // System.out.println(temp);
             return -1 * Double.parseDouble(temp);
@@ -69,13 +69,13 @@ public class AmountParser {
         // Negative
         if (value.contains("(") && value.contains(")")) {
             String s = Character.toString(value.charAt(1));
-            String temp = Currency.valueOf("USD").getValue();
+            String temp = Currency.valueOf(s).getValue();
             return temp;
         }
         // Positive
         else {
             String s = Character.toString(value.charAt(0));
-            String temp = Currency.valueOf("USD").getValue();
+            String temp = Currency.valueOf(s).getValue();
             return temp;
         }
     }

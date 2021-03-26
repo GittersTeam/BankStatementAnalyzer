@@ -31,7 +31,7 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return "Transaction [accBalance=" + accBalance.toString() + ", date=" + date + "]";
+		return "Transaction [accBalance=" + accBalance.toString() + ", date=" + date + "]\n";
 	}
 
 }

@@ -1,7 +1,5 @@
 package com.gitters.domain.transactions;
 
-import com.gitters.domain.Currency;
-
 public class Charge {
 	private Double amount;
 	private String currency;

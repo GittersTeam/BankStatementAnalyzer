@@ -5,17 +5,17 @@ import java.util.Date;
 import com.gitters.domain.balance.AccountBalance;
 
 public class OutBoundTransaction extends Transaction {
+	private Charge charge;
+	private String to;
 
 	public OutBoundTransaction(Date date, String desc, Charge charge, AccountBalance accBalance) {
 		super(date, accBalance);
 		setDate(date);
 		setAccBalance(accBalance);
-		this.charge = charge;
-		this.to = to;
+		setCharge(charge);
+		setTo(desc);
+		;
 	}
-
-	private Charge charge;
-	private String to;
 
 	public String getTo() {
 		return to;
@@ -35,7 +35,7 @@ public class OutBoundTransaction extends Transaction {
 
 	@Override
 	public String toString() {
-		return "OutBoundTransaction [charge=" + charge.toString() + ", to=" + to + "]";
+		return "OutBoundTransaction [charge=" + charge.toString() + ", to=" + to + "]\n";
 	}
 
 }

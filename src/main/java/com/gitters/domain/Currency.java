@@ -2,18 +2,13 @@ package com.gitters.domain;
 
 public enum Currency {
 
-        USD("$"), NIS("₪"), EURO("€"), GBP("£"), JD("JOD");
+        $("USD"), ₪("NIS"), €("EURO"), £("GBP"), JD("JOD");
 
         private String value;
 
         private Currency(String value) {
                 this.value = value;
         }
-
-        // @Override
-        // public String toString() {
-        // return this.value;
-        // }
 
         /**
          * @return String return the value
