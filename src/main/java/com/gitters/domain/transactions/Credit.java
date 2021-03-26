@@ -4,13 +4,13 @@ import com.gitters.domain.Currency;
 
 public class Credit {
 	private double amount;
-	private Currency currency;
+	private String currency;
 
 	public Credit() {
 
 	}
 
-	public Credit(double amount, Currency currency) {
+	public Credit(double amount, String currency) {
 		this.amount = amount;
 		this.currency = currency;
 	}
@@ -27,11 +27,17 @@ public class Credit {
 		this.amount = amount;
 	}
 
-	public Currency getCurrency() {
+	public String getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(Currency currency) {
+	public void setCurrency(String currency) {
 		this.currency = currency;
 	}
+
+	@Override
+	public String toString() {
+		return "Credit [amount=" + amount + ", currency=" + currency + "]";
+	}
+
 }

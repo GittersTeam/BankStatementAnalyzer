@@ -29,4 +29,9 @@ public class Transaction {
 		this.accBalance = accBalance;
 	}
 
+	@Override
+	public String toString() {
+		return "Transaction [accBalance=" + accBalance.toString() + ", date=" + date + "]";
+	}
+
 }

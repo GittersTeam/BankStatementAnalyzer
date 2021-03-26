@@ -33,6 +33,7 @@ public class FileReader implements Reader {
 	public FileReader(String path) {
 		bank = new BankStatement(path);
 		transactions = new ArrayList<Transaction>();
+		parser = new AmountParser();
 
 	}
 
@@ -49,19 +50,21 @@ public class FileReader implements Reader {
 
 			String data = s.nextLine();
 			String[] values = data.split(",");
+			// System.out.println(values[4]);
 			if (i == 1) {
 				iniBalance = (InitialBalance) parser.parse(values[4], ParseType.INITIAL_BALANCE);
+				i++;
 				continue;
 			}
 			String chargesvalues = values[2];
 			SimpleDateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");
 			Date date = formatter1.parse(values[0]);
+			// System.out.println(date);
 			if (!chargesvalues.isEmpty()) {
 				OutBoundTransaction charge = new OutBoundTransaction(date, values[1],
 						(Charge) parser.parse(chargesvalues, ParseType.CHARGE),
 						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
 				transactions.add(charge);
-
 			}
 			String creditvalues = values[3];
 			if (!creditvalues.isEmpty()) {
@@ -70,8 +73,11 @@ public class FileReader implements Reader {
 						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
 				transactions.add(credit);
 			}
+			i++;
 		}
 		s.close();
+
+		bank.setTransactions(transactions);
 
 		return bank;
 	}

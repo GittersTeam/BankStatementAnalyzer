@@ -4,9 +4,9 @@ import com.gitters.domain.Currency;
 
 public class Balance {
     double amount;
-    Currency currency;
+    String currency;
 
-    public Balance(double amount,Currency currency) {
+    public Balance(double amount, String currency) {
         setAmount(amount);
         setCurrency(currency);
     }
@@ -19,11 +19,11 @@ public class Balance {
         this.amount = amount;
     }
 
-    public Currency getCurrency() {
+    public String getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(String currency) {
         this.currency = currency;
     }
 }

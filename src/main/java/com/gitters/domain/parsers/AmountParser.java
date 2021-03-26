@@ -1,4 +1,5 @@
 package com.gitters.domain.parsers;
+
 import com.gitters.domain.Currency;
 import com.gitters.domain.balance.AccountBalance;
 import com.gitters.domain.balance.InitialBalance;
@@ -10,70 +11,71 @@ public class AmountParser {
 
     }
 
-    // $40.00
-    // ($40.00)
     public Object parse(String value, ParseType type) {
+        // System.out.println();
         switch (type) {
         case CHARGE:
-            parseToChange(value);
-            break;
+            return parseToChange(value);
         case CREDIT:
-            parseToCredit(value);
-            break;
+            return parseToCredit(value);
         case ACCOUNT_BALANCE:
-            parseToAccountBalance(value);
-            break;
+            return parseToAccountBalance(value);
         case INITIAL_BALANCE:
-            parseToInitialBalance(value);
-            break;
-
+            return parseToInitialBalance(value);
         default:
             return null;
         }
-        return null;
     }
 
     private InitialBalance parseToInitialBalance(String value) {
-
-        return new InitialBalance(convert(value), getSign(value));
+        InitialBalance i = new InitialBalance(convert(value), getSign(value));
+        return i;
     }
 
     private AccountBalance parseToAccountBalance(String value) {
-        return new AccountBalance(convert(value), getSign(value));
+        AccountBalance a = new AccountBalance(convert(value), getSign(value));
+        return a;
     }
 
     private Credit parseToCredit(String value) {
-        return new Credit(convert(value), getSign(value));
+        Credit c = new Credit(convert(value), getSign(value));
+        return c;
     }
 
     private Charge parseToChange(String value) {
-        return new Charge(convert(value), getSign(value));
+        Charge c = new Charge(convert(value), getSign(value));
+        return c;
     }
 
     private Double convert(String value) {
         // Negative
-        if (value.contains("(") && value.contains(")")) {
+        if (value.contains("-")) {
             String temp = value.substring(2, value.length() - 1);
+            // System.out.println(temp);
             return -1 * Double.parseDouble(temp);
 
         }
         // Positive
         else {
-            String temp = value.substring(2, value.length() - 1);
+            String temp = value.substring(1, value.length() - 1);
+            // System.out.println(temp);
+
             return Double.parseDouble(temp);
 
         }
     }
 
-    private Currency getSign(String value) {
+    private String getSign(String value) {
         // Negative
         if (value.contains("(") && value.contains(")")) {
-            Currency temp = Currency.valueOf(Character.toString(value.charAt(1)));
+            String s = Character.toString(value.charAt(1));
+            String temp = Currency.valueOf("USD").getValue();
             return temp;
         }
         // Positive
         else {
-            Currency temp = Currency.valueOf(Character.toString(value.charAt(0)));
+            String s = Character.toString(value.charAt(0));
+            String temp = Currency.valueOf("USD").getValue();
             return temp;
         }
     }

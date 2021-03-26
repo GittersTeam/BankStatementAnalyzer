@@ -10,6 +10,8 @@ public class OutBoundTransaction extends Transaction {
 		super(date, accBalance);
 		setDate(date);
 		setAccBalance(accBalance);
+		this.charge = charge;
+		this.to = to;
 	}
 
 	private Charge charge;
@@ -30,4 +32,10 @@ public class OutBoundTransaction extends Transaction {
 	public void setCharge(Charge charge) {
 		this.charge = charge;
 	}
+
+	@Override
+	public String toString() {
+		return "OutBoundTransaction [charge=" + charge.toString() + ", to=" + to + "]";
+	}
+
 }

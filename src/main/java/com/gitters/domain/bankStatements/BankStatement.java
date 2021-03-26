@@ -7,14 +7,14 @@ import com.gitters.domain.transactions.Transaction;
 public class BankStatement {
 
 	private String statmentId;
-	private List<Transaction> transactions = new ArrayList<Transaction>();
+	private List<Transaction> transactions;
 
 	public BankStatement() {
-
 	}
 
 	public BankStatement(String csv) {
 		this.statmentId = csv;
+		transactions = new ArrayList<Transaction>();
 
 	}
 
