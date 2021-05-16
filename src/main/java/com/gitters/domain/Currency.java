@@ -2,8 +2,8 @@ package com.gitters.domain;
 
 public enum Currency {
 
-        $("USD"), ₪("NIS"), €("EURO"), £("GBP"), JD("JOD");
-
+	 $("USD"), ₪("NIS"), €("EURO"), £("GBP"), JD("JOD");
+	
         private String value;
 
         private Currency(String value) {

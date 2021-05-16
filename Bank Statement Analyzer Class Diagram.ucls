@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="com.gitters.domain.reporters.Reporter" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/reporters/Reporter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="130" x="2773" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="com.gitters.domain.transactions.Credit" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/transactions/Credit.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="145" x="1995" y="796"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.gitters.domain.reporters.EmailReporter" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/reporters/EmailReporter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="130" x="3030" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.gitters.runners.BankStatementAnalyzer" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/runners/BankStatementAnalyzer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="161" x="512" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.gitters.domain.balance.AccountBalance" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/balance/AccountBalance.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="178" x="2332" y="567"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="com.gitters.domain.processors.Processor" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/processors/Processor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="180" x="1469" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="com.gitters.domain.bankStatements.BankStatement" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/bankStatements/BankStatement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="248" x="2044" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.gitters.domain.processors.ProfitOrLoss" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/processors/ProfitOrLoss.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="177" x="1607" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="9" language="java" name="com.gitters.domain.Currency" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/Currency.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="127" x="345" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="10" language="java" name="com.gitters.domain.reporters.MobileAppReporter" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/reporters/MobileAppReporter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="133" x="2687" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="com.gitters.domain.processors.TopCategory" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/processors/TopCategory.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="180" x="1824" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="com.gitters.domain.readers.CSVReader" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/readers/CSVReader.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="178" x="799" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="13" language="java" name="com.gitters.domain.parsers.ParseType" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/parsers/ParseType.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="188" x="884" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="14" language="java" name="com.gitters.domain.transactions.InBoundTransaction" 
+    project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/transactions/InBoundTransaction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="297" x="1995" y="567"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="com.gitters.domain.processors.NumberOfTransaction" 
+    project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/processors/NumberOfTransaction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="180" x="1112" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="com.gitters.domain.reporters.SMSReporter" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/reporters/SMSReporter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="130" x="2860" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="com.gitters.domain.balance.Balance" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/balance/Balance.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="145" x="2332" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="com.gitters.domain.processors.TopTransaction" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/processors/TopTransaction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="235" x="1332" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="com.gitters.domain.reporters.TextReporter" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/reporters/TextReporter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="130" x="2517" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="com.gitters.domain.transactions.Charge" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/transactions/Charge.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="145" x="1642" y="796"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="com.gitters.domain.transactions.Transaction" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/transactions/Transaction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="211" x="1900" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="com.gitters.domain.balance.InitialBalance" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/balance/InitialBalance.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="160" x="2151" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.gitters.domain.readers.FileReader" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/readers/FileReader.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="131" x="713" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.gitters.domain.parsers.AmountParser" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/parsers/AmountParser.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="264" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="com.gitters.domain.transactions.OutBoundTransaction" 
+    project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/transactions/OutBoundTransaction.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="313" x="1642" y="567"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="26" language="java" name="com.gitters.domain.readers.Reader" project="BankStatementAnalyzer" 
+    file="/BankStatementAnalyzer/src/main/java/com/gitters/domain/readers/Reader.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="131" x="628" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <realization id="28">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="29">    
+    <bendpoint x="2341" y="338"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <realization id="31">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="32">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="33" name="charge">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="35">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="36">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="37" name="transactions">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="39">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="40">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <realization id="41">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="42">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="43" name="accBalance">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="44" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="45">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="46">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="47" name="credit">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="49">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="50">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="51">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="52">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="53" name="initialBalance">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="54" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="55">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

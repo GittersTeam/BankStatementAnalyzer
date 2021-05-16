@@ -21,61 +21,26 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FileReader implements Reader {
-	private BankStatement bank;
-	private AmountParser parser;
-	private List<Transaction> transactions;
+	private String path;
 
 	public FileReader() {
 
 	}
 
 	public FileReader(String path) {
-		bank = new BankStatement(path);
-		transactions = new ArrayList<Transaction>();
-		parser = new AmountParser();
+		this.path = path;
+	}
 
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	public BankStatement read() throws FileNotFoundException, ParseException {
-		File file = new File(bank.getStatmentId());
-		Scanner s = new Scanner(file);
-		int i = 0;
-		while (s.hasNext()) {
-			if (i < 1) {
-				i++;
-				s.nextLine();
-				continue;
-			}
-
-			String data = s.nextLine();
-			String[] values = data.split(",");
-			if (i == 1) {
-				bank.setInitialBalance((InitialBalance) parser.parse(values[4], ParseType.INITIAL_BALANCE));
-				i++;
-				continue;
-			}
-			String chargesvalues = values[2];
-			SimpleDateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");
-			Date date = formatter1.parse(values[0]);
-			if (!chargesvalues.isEmpty()) {
-				OutBoundTransaction charge = new OutBoundTransaction(date, values[1],
-						(Charge) parser.parse(chargesvalues, ParseType.CHARGE),
-						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
-				transactions.add(charge);
-			}
-			String creditvalues = values[3];
-			if (!creditvalues.isEmpty()) {
-				InBoundTransaction credit = new InBoundTransaction(date, values[1],
-						(Credit) parser.parse(creditvalues, ParseType.CREDIT),
-						(AccountBalance) parser.parse(values[4], ParseType.ACCOUNT_BALANCE));
-				transactions.add(credit);
-			}
-			i++;
-		}
-		s.close();
-		bank.setTransactions(transactions);
-
-		return bank;
+		return null;
 	}
 
 }
